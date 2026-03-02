@@ -195,7 +195,7 @@
 
 ```
 Model: gpt-4o
-Temperature: 0.1 (low — we want consistent, factual financial analysis)
+Temperature: 0.0 (planner, deterministic) / 0.3 (synthesis, slight creativity for explanations)
 Max tokens: 2048 (sufficient for detailed analysis responses)
 ```
 
@@ -494,7 +494,7 @@ LANGCHAIN_PROJECT=ghostfolio-ai-agent
 - Test each tool independently: valid input → expected output, invalid input → graceful error
 - Test Zod schema validation for each tool's input/output
 - Test JWT forwarding logic in `ghostfolio-client.ts`
-- ~35 unit tests (5 per tool)
+- 21 test files: 7 tool tests, 5 graph tests, 7 verification tests, 1 client test, 1 integration test
 
 **Integration Tests (agent flows):**
 
@@ -503,7 +503,7 @@ LANGCHAIN_PROJECT=ghostfolio-ai-agent
 - Test multi-turn conversations (memory persistence)
 - Test error propagation (HTTP errors from Ghostfolio → user-friendly messages)
 - Test auth flow (missing JWT → error, valid JWT → data returned)
-- ~15 integration tests
+- 69-case eval suite covers integration flows (see `eval-cases.json`)
 
 **Adversarial Testing:**
 

@@ -4,7 +4,7 @@
 
 This document captures the AI cost analysis for the Ghostfolio AI Agent, covering development spend, per-query costs, and production projections at various user tiers. Data is sourced from LangSmith traces (authoritative, server-side cost computation).
 
-Last updated: 2026-03-02T00:01:45.501Z
+Last updated: 2026-03-02T04:36:04.469Z
 
 To regenerate with current data:
 
@@ -16,29 +16,29 @@ cd apps/agent && bun run ai:cost-analysis
 
 | Metric             | Value |
 | ------------------ | ----- |
-| Total cost         | $12.774558 |
-| Total tokens       | 13,031,250 |
-| Input tokens       | 11,953,578 |
-| Output tokens      | 1,077,672 |
-| Total API calls    | 9,317 |
-| Total chat queries | 4,995 |
+| Total cost         | $14.707388 |
+| Total tokens       | 16,562,227 |
+| Input tokens       | 15,218,073 |
+| Output tokens      | 1,344,154 |
+| Total API calls    | 11,143 |
+| Total chat queries | 6,440 |
 
 ## Per-Query Averages
 
 | Metric           | Value |
 | ---------------- | ----- |
-| Avg tokens/query | 2,609 |
-| Avg input tokens | 2,393 |
-| Avg output tokens | 216 |
-| Avg cost/query   | $0.002557 |
+| Avg tokens/query | 2,572 |
+| Avg input tokens | 2,363 |
+| Avg output tokens | 209 |
+| Avg cost/query   | $0.002284 |
 
 ## Model Breakdown
 
 | Model | Input Tokens | Output Tokens | Total Tokens | Cost | API Calls |
 | ----- | ------------ | ------------- | ------------ | ---- | --------- |
-| gpt-5.1 | 791,395 | 87,793 | 879,188 | $1.153654 | 488 |
-| gpt-4o-mini | 6,775,024 | 705,991 | 7,481,015 | $1.139887 | 6,153 |
-| gpt-4o | 4,387,159 | 283,888 | 4,671,047 | $10.481017 | 2,652 |
+| gpt-5.1 | 1,225,352 | 132,527 | 1,357,879 | $1.758240 | 734 |
+| gpt-4o-mini | 9,173,656 | 896,075 | 10,069,731 | $1.464365 | 7,493 |
+| gpt-4o | 4,819,065 | 315,552 | 5,134,617 | $11.484782 | 2,892 |
 | MockSequentialChatModel | 0 | 0 | 0 | $0.000000 | 24 |
 
 ## Production Model Selection
@@ -59,18 +59,18 @@ The agent defaults to **gpt-4o** for highest quality responses. For cost-sensiti
 
 | Users | Monthly Queries | Monthly Cost | Monthly Tokens | Cost/User |
 | ----- | --------------- | ------------ | -------------- | --------- |
-| 100 | 6,000 | $15.34 | 15,653,153 | $0.15 |
-| 1,000 | 60,000 | $153.45 | 156,531,532 | $0.15 |
-| 10,000 | 600,000 | $1534.48 | 1,565,315,315 | $0.15 |
-| 100,000 | 6,000,000 | $15344.81 | 15,653,153,153 | $0.15 |
+| 100 | 6,000 | $13.70 | 15,430,646 | $0.14 |
+| 1,000 | 60,000 | $137.03 | 154,306,463 | $0.14 |
+| 10,000 | 600,000 | $1370.25 | 1,543,064,627 | $0.14 |
+| 100,000 | 6,000,000 | $13702.54 | 15,430,646,273 | $0.14 |
 
 ### Model Cost Comparison
 
 | Model | Cost/Query | 100 users/mo | 1K users/mo | 10K users/mo | 100K users/mo |
 | ----- | ---------- | ------------ | ----------- | ------------ | ------------- |
-| gpt-5.1 | $0.000231 | $1.39 | $13.86 | $138.58 | $1385.77 |
-| gpt-4o-mini | $0.000228 | $1.37 | $13.69 | $136.92 | $1369.23 |
-| gpt-4o | $0.002098 | $12.59 | $125.90 | $1258.98 | $12589.81 |
+| gpt-5.1 | $0.000273 | $1.64 | $16.38 | $163.81 | $1638.11 |
+| gpt-4o-mini | $0.000227 | $1.36 | $13.64 | $136.43 | $1364.32 |
+| gpt-4o | $0.001783 | $10.70 | $107.00 | $1070.01 | $10700.11 |
 | MockSequentialChatModel | $0.000000 | $0.00 | $0.00 | $0.00 | $0.00 |
 
 ## Optimization Opportunities
@@ -97,10 +97,10 @@ _Infrastructure costs are fixed and independent of user count (until compute/mem
 
 | Users   | AI Cost/mo | Infra Cost/mo | Total/mo | Per User/mo |
 | ------- | ---------- | ------------- | -------- | ----------- |
-| 100 | $15.34 | $25 | $40.34 | $0.40 |
-| 1,000 | $153.45 | $25 | $178.45 | $0.18 |
-| 10,000 | $1534.48 | $50 | $1584.48 | $0.16 |
-| 100,000 | $15344.81 | $200 | $15544.81 | $0.16 |
+| 100 | $13.70 | $25 | $38.70 | $0.39 |
+| 1,000 | $137.03 | $25 | $162.03 | $0.16 |
+| 10,000 | $1370.25 | $50 | $1420.25 | $0.14 |
+| 100,000 | $13702.54 | $200 | $13902.54 | $0.14 |
 
 _AI costs dominate at scale. The primary lever for cost reduction is model selection (gpt-4o-mini) or implementing query-level model routing._
 

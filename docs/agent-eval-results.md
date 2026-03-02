@@ -10,44 +10,44 @@ For how this fits into the overall architecture, see the [Agent Architecture](ag
 
 ### Decision
 
-**gpt-4o-mini at temperature 0** is used for the primary agent LLM (`OPENAI_MODEL`).
+**gpt-4o-mini at temperature 0** is the recommended production model (`OPENAI_MODEL=gpt-4o-mini`). The code default is `gpt-4o`, but evals show gpt-4o-mini achieves the highest pass rate at ~17x lower cost.
 
 ### Experiment Results
 
-Four model variants were evaluated across the full 68-case eval suite (run 2026-03-02):
+Four model variants were evaluated across the full 69-case eval suite (latest run 2026-03-02):
 
 | Variant               | Model       | Temp | Pass Rate | Accuracy | Precision | Groundedness | Confidence | P50  | P95   | Avg Tokens | Avg Cost |
 | --------------------- | ----------- | ---- | --------- | -------- | --------- | ------------ | ---------- | ---- | ----- | ---------- | -------- |
-| **Baseline (chosen)** | gpt-4o-mini | 0.0  | 98.5%     | 0.99     | 1.00      | 0.99         | 0.85       | 2.1s | 11.7s | 2,192      | $0.0004  |
-| Higher-temp           | gpt-4o-mini | 0.3  | 97.1%     | 0.99     | 1.00      | 0.99         | 0.85       | 2.1s | 10.4s | 2,115      | $0.0004  |
-| GPT-4o                | gpt-4o      | 0.0  | 95.6%     | 1.00     | 1.00      | 1.00         | 0.85       | 1.6s | 23.1s | 1,901      | $0.0057  |
-| GPT-5.1               | gpt-5.1     | 0.0  | 92.6%     | 0.99     | 1.00      | 0.99         | 0.85       | 1.8s | 7.5s  | 1,940      | $0.0039  |
+| **Baseline (chosen)** | gpt-4o-mini | 0.0  | 100%      | 1.00     | 1.00      | 1.00         | 0.86       | 3.8s | 13.0s | 2,894      | $0.0005  |
+| Higher-temp           | gpt-4o-mini | 0.3  | 100%      | 1.00     | 1.00      | 1.00         | 0.86       | 2.8s | 12.7s | 2,890      | $0.0005  |
+| GPT-4o                | gpt-4o      | 0.0  | 95.7%     | 1.00     | 1.00      | 1.00         | 0.86       | 5.0s | 28.6s | 2,877      | $0.0088  |
+| GPT-5.1               | gpt-5.1     | 0.0  | 95.7%     | 0.99     | 1.00      | 0.99         | 0.86       | 3.5s | 12.9s | 3,150      | $0.0070  |
 
 ### Rationale
 
-- **Baseline has the highest pass rate (98.5%)** — no variant achieves 100% anymore, but gpt-4o-mini at temp 0 still leads. Larger models (gpt-4o at 95.6%, gpt-5.1 at 92.6%) fail more cases, likely due to over-reasoning or deviating from the structured planner output format.
-- **~14x cheaper** than gpt-4o ($0.0004 vs $0.0057 per query) with comparable groundedness (0.99 vs 1.00).
-- **Temperature 0** chosen over 0.3 for deterministic, reproducible responses — temp 0 achieves a slightly higher pass rate (98.5% vs 97.1%).
+- **Baseline achieves 100% pass rate** — gpt-4o-mini at temp 0 passes all 69 cases. Larger models (gpt-4o at 95.7%, gpt-5.1 at 95.7%) fail 3 cases each, likely due to over-reasoning or deviating from the structured planner output format.
+- **~17x cheaper** than gpt-4o ($0.0005 vs $0.0088 per query) with equivalent groundedness (1.00 vs 1.00).
+- **Temperature 0** chosen over 0.3 for deterministic, reproducible responses — both achieve 100% pass rate, but temp 0 provides more consistent output across runs.
 - Fact-checking is fully deterministic (no LLM) — only the planner and synthesis nodes use the primary model.
 
 ---
 
 ## Latest Eval Results
 
-Full eval suite run (68 cases) with gpt-4o-mini at temperature 0:
+Full eval suite run (69 cases) with gpt-4o-mini at temperature 0:
 
 | Metric              | Value   |
 | ------------------- | ------- |
-| Total cases         | 68      |
-| Pass rate           | 98.5%   |
-| Accuracy (mean)     | 0.99    |
+| Total cases         | 69      |
+| Pass rate           | 100%    |
+| Accuracy (mean)     | 1.00    |
 | Precision (mean)    | 1.00    |
-| Groundedness (mean) | 0.99    |
-| Confidence (mean)   | 0.85    |
-| Latency (p50)       | 2.1s    |
-| Latency (p95)       | 11.7s   |
-| Avg tokens          | 2,192   |
-| Cost/query (mean)   | $0.0004 |
+| Groundedness (mean) | 1.00    |
+| Confidence (mean)   | 0.86    |
+| Latency (p50)       | 3.8s    |
+| Latency (p95)       | 13.0s   |
+| Avg tokens          | 2,894   |
+| Cost/query (mean)   | $0.0005 |
 
 ---
 
@@ -89,13 +89,13 @@ bun run src/test/eval/run-evals.ts [options]
 
 ## Test Case Breakdown
 
-**68 total cases** across 5 categories and 5 portfolio fixtures.
+**69 total cases** across 5 categories and 5 portfolio fixtures.
 
 ### By Category
 
 | Category     | Cases | Description                                                  |
 | ------------ | ----- | ------------------------------------------------------------ |
-| happy-path   | 28    | Standard single-tool queries across all 7 tools              |
+| happy-path   | 29    | Standard single-tool queries across all 7 tools              |
 | multi-tool   | 6     | Queries requiring 2–3 tools in a single response             |
 | reasoning    | 8     | Cross-cutting analytical questions (comparisons, rankings)   |
 | adversarial  | 12    | Buy/sell orders, predictions, jailbreak attempts — all should refuse |
@@ -105,7 +105,7 @@ bun run src/test/eval/run-evals.ts [options]
 
 | Portfolio            | Cases | Net Worth  | Holdings | Characteristics                                          |
 | -------------------- | ----- | ---------- | -------- | -------------------------------------------------------- |
-| balanced-growth      | 48    | $38,951    | 3        | Default portfolio. VTI/AAPL/BND mix, 12-month streak    |
+| balanced-growth      | 49    | $38,951    | 3        | Default portfolio. VTI/AAPL/BND mix, 12-month streak    |
 | conservative-retiree | 4     | $200,000   | 5        | IRA with 45% fixed income, gold hedge, inflation protection |
 | aggressive-growth    | 5     | $150,000   | 5        | 100% equities, NVDA/TSLA/ARKK/SOFI/PLTR, 21% annualized |
 | dividend-income      | 3     | $200,000   | 5        | $8,490 annual dividends, VYM/SCHD/O/JNJ/PG              |
@@ -115,12 +115,12 @@ bun run src/test/eval/run-evals.ts [options]
 
 ## Verification Pipeline Overview
 
-The agent runs a 5-tier verification pipeline on every response:
+Prompt injection is caught by the **input guard** (`input-guard.ts`), which runs **pre-graph** before any LLM or verification. The graph itself runs a 5-tier verification pipeline on every response:
 
 | Tier | Check                                  | Blocking?    |
 | ---- | -------------------------------------- | ------------ |
 | 1    | Domain constraint validation           | Yes          |
-| 2    | Prompt-injection / off-topic detection | Yes          |
+| 2    | Output validation                      | Yes          |
 | 3    | Confidence scoring                     | No           |
 | 4    | Hallucination detection (deterministic) | No (warning) |
 | 5    | Groundedness scoring (deterministic)    | No (warning) |
