@@ -1,0 +1,44 @@
+{
+  "name": "ghostfolio-agent",
+  "version": "0.1.0",
+  "description": "AI-powered portfolio assistant for Ghostfolio",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SebastianGarces/ghostfolio-agent.git"
+  },
+  "scripts": {
+    "dev": "bun run build-widget.ts && bun run --watch src/main.ts",
+    "dev:widget": "bun run watch-widget.ts",
+    "build": "bun run build-widget.ts",
+    "test": "bun test",
+    "eval": "npx dotenv-cli -e ./.env -- bun run src/test/eval/run-evals.ts",
+    "experiment": "npx dotenv-cli -e ./.env -- bun run src/test/eval/experiments/run-experiment.ts",
+    "experiment:compare": "bun run src/test/eval/experiments/compare-experiments.ts",
+    "ai:cost-analysis": "npx dotenv-cli -e ./.env -- bun run scripts/ai-cost-analysis.ts",
+    "trace-review": "npx dotenv-cli -e ./.env -- bun run scripts/ai-trace-review.ts",
+    "start": "bun run src/main.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "1.2.0",
+    "@langchain/core": "^1.1.28",
+    "@langchain/langgraph": "^1.2.0",
+    "@langchain/openai": "^1.2.8",
+    "elysia": "1.2.0",
+    "langsmith": "^0.5.6",
+    "lucide-react": "^0.474.0",
+    "marked": "17.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "recharts": "^2.15.3",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.0",
+    "@types/react-dom": "19.0.0",
+    "bun-types": "1.2.0",
+    "dotenv-cli": "^8.0.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.0.0"
+  }
+}

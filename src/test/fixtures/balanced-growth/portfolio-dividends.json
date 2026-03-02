@@ -1,0 +1,16 @@
+{
+  "dividends": [
+    { "date": "2024-01-15", "investment": 45.5 },
+    { "date": "2024-02-15", "investment": 45.5 },
+    { "date": "2024-03-15", "investment": 52.25 },
+    { "date": "2024-04-15", "investment": 52.25 },
+    { "date": "2024-05-15", "investment": 52.25 },
+    { "date": "2024-06-15", "investment": 58.0 },
+    { "date": "2024-07-15", "investment": 58.0 },
+    { "date": "2024-08-15", "investment": 58.0 },
+    { "date": "2024-09-15", "investment": 63.75 },
+    { "date": "2024-10-15", "investment": 63.75 },
+    { "date": "2024-11-15", "investment": 63.75 },
+    { "date": "2024-12-15", "investment": 70.5 }
+  ]
+}

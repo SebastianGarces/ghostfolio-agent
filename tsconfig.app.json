@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "types": ["bun-types"],
+    "jsx": "react-jsx"
+  },
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "build-widget.ts",
+    "watch-widget.ts"
+  ]
+}

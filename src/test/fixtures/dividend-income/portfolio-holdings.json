@@ -1,0 +1,64 @@
+{
+  "holdings": [
+    {
+      "symbol": "VYM",
+      "name": "Vanguard High Dividend Yield ETF",
+      "allocationInPercentage": 0.3,
+      "valueInBaseCurrency": 60000,
+      "netPerformance": 7900,
+      "netPerformancePercent": 0.153,
+      "quantity": 522,
+      "assetClass": "EQUITY",
+      "assetSubClass": "ETF",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SCHD",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "allocationInPercentage": 0.25,
+      "valueInBaseCurrency": 50000,
+      "netPerformance": 6200,
+      "netPerformancePercent": 0.143,
+      "quantity": 610,
+      "assetClass": "EQUITY",
+      "assetSubClass": "ETF",
+      "currency": "USD"
+    },
+    {
+      "symbol": "O",
+      "name": "Realty Income Corporation",
+      "allocationInPercentage": 0.15,
+      "valueInBaseCurrency": 30000,
+      "netPerformance": 900,
+      "netPerformancePercent": 0.031,
+      "quantity": 536,
+      "assetClass": "EQUITY",
+      "assetSubClass": "REIT",
+      "currency": "USD"
+    },
+    {
+      "symbol": "JNJ",
+      "name": "Johnson & Johnson",
+      "allocationInPercentage": 0.15,
+      "valueInBaseCurrency": 30000,
+      "netPerformance": 2500,
+      "netPerformancePercent": 0.092,
+      "quantity": 188,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PG",
+      "name": "The Procter & Gamble Company",
+      "allocationInPercentage": 0.15,
+      "valueInBaseCurrency": 30000,
+      "netPerformance": 3200,
+      "netPerformancePercent": 0.12,
+      "quantity": 182,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "currency": "USD"
+    }
+  ]
+}

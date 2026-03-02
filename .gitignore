@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/widget.js
+dist/out-tsc/
+
+# Runtime data
+data/checkpoints.db*
+
+# Environment
+.env
+.env.prod
+
+# Generated artifacts
+artifacts/*.json
+artifacts/*.md
+
+# Eval results (large, regenerable)
+src/test/eval/results/
+src/test/eval/experiments/results/
+
+# System
+.DS_Store
+Thumbs.db
+tmp/

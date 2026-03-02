@@ -1,0 +1,40 @@
+{
+  "holdings": [
+    {
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "allocationInPercentage": 0.35,
+      "valueInBaseCurrency": 12428.5,
+      "netPerformance": 2450,
+      "netPerformancePercent": 0.245,
+      "quantity": 67,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "currency": "USD"
+    },
+    {
+      "symbol": "VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "allocationInPercentage": 0.45,
+      "valueInBaseCurrency": 19200,
+      "netPerformance": 3150,
+      "netPerformancePercent": 0.197,
+      "quantity": 80,
+      "assetClass": "EQUITY",
+      "assetSubClass": "ETF",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BND",
+      "name": "Vanguard Total Bond Market ETF",
+      "allocationInPercentage": 0.2,
+      "valueInBaseCurrency": 7322.5,
+      "netPerformance": -180,
+      "netPerformancePercent": -0.024,
+      "quantity": 101,
+      "assetClass": "FIXED_INCOME",
+      "assetSubClass": "ETF",
+      "currency": "USD"
+    }
+  ]
+}

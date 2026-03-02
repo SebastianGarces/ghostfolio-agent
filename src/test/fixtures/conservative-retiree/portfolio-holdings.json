@@ -1,0 +1,64 @@
+{
+  "holdings": [
+    {
+      "symbol": "BND",
+      "name": "Vanguard Total Bond Market ETF",
+      "allocationInPercentage": 0.4,
+      "valueInBaseCurrency": 80000,
+      "netPerformance": 800,
+      "netPerformancePercent": 0.01,
+      "quantity": 1103,
+      "assetClass": "FIXED_INCOME",
+      "assetSubClass": "ETF",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SCHD",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "allocationInPercentage": 0.25,
+      "valueInBaseCurrency": 50000,
+      "netPerformance": 5200,
+      "netPerformancePercent": 0.117,
+      "quantity": 610,
+      "assetClass": "EQUITY",
+      "assetSubClass": "ETF",
+      "currency": "USD"
+    },
+    {
+      "symbol": "VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "allocationInPercentage": 0.2,
+      "valueInBaseCurrency": 40000,
+      "netPerformance": 5900,
+      "netPerformancePercent": 0.175,
+      "quantity": 167,
+      "assetClass": "EQUITY",
+      "assetSubClass": "ETF",
+      "currency": "USD"
+    },
+    {
+      "symbol": "GLD",
+      "name": "SPDR Gold Shares",
+      "allocationInPercentage": 0.1,
+      "valueInBaseCurrency": 20000,
+      "netPerformance": 2600,
+      "netPerformancePercent": 0.151,
+      "quantity": 108,
+      "assetClass": "COMMODITY",
+      "assetSubClass": "ETF",
+      "currency": "USD"
+    },
+    {
+      "symbol": "VTIP",
+      "name": "Vanguard Short-Term Inflation-Protected Securities ETF",
+      "allocationInPercentage": 0.05,
+      "valueInBaseCurrency": 10000,
+      "netPerformance": 100,
+      "netPerformancePercent": 0.011,
+      "quantity": 206,
+      "assetClass": "FIXED_INCOME",
+      "assetSubClass": "ETF",
+      "currency": "USD"
+    }
+  ]
+}

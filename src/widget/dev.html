@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ghostfolio AI Agent - Widget Dev</title>
+    <style>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        margin: 0;
+        padding: 40px;
+        background: #f5f5f5;
+        color: #333;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #3a86ff;
+      }
+      .info {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .info code {
+        background: #f0f0f0;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      .setup-form {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: 600;
+      }
+      input[type='text'] {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: #3a86ff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      button:hover {
+        background: #2a76ef;
+      }
+      .status {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      .status.success {
+        color: green;
+      }
+      .status.error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ghostfolio AI Agent - Widget Dev Mode</h1>
+
+      <div class="info">
+        <h3>How to use</h3>
+        <p>
+          This page lets you test the chat widget in isolation without running
+          the full Ghostfolio app.
+        </p>
+        <ol>
+          <li>
+            Start the agent server:
+            <code>cd apps/agent && bun run src/main.ts</code>
+          </li>
+          <li>
+            Get a JWT from Ghostfolio (log in to Ghostfolio, open DevTools, run:
+            <code>sessionStorage.getItem('auth-token')</code>)
+          </li>
+          <li>Paste the JWT below and click "Load Widget"</li>
+        </ol>
+      </div>
+
+      <div class="setup-form">
+        <h3>Widget Configuration</h3>
+        <label for="jwt">JWT Token:</label>
+        <input
+          id="jwt"
+          placeholder="Paste your Ghostfolio JWT token here..."
+          type="text"
+        />
+
+        <label for="agentUrl">Agent URL:</label>
+        <input id="agentUrl" type="text" value="http://localhost:3334" />
+
+        <button onclick="loadWidget()">Load Widget</button>
+        <div class="status" id="status"></div>
+      </div>
+    </div>
+
+    <script>
+      function loadWidget() {
+        var jwt = document.getElementById('jwt').value.trim();
+        var agentUrl = document.getElementById('agentUrl').value.trim();
+        var statusEl = document.getElementById('status');
+
+        if (!jwt) {
+          statusEl.textContent = 'Please enter a JWT token.';
+          statusEl.className = 'status error';
+          return;
+        }
+
+        // Set JWT in sessionStorage (the widget reads from here)
+        sessionStorage.setItem('auth-token', jwt);
+
+        // Remove existing widget if any
+        var existing = document.getElementById('ghostfolio-agent-widget');
+        if (existing) existing.remove();
+
+        // Remove old script
+        var oldScript = document.getElementById('widget-script');
+        if (oldScript) oldScript.remove();
+
+        // Load widget script
+        var script = document.createElement('script');
+        script.id = 'widget-script';
+        script.src = agentUrl + '/widget.js';
+        script.onload = function () {
+          statusEl.textContent =
+            'Widget loaded! Look for the chat button in the bottom-right corner.';
+          statusEl.className = 'status success';
+        };
+        script.onerror = function () {
+          statusEl.textContent =
+            'Failed to load widget. Is the agent server running at ' +
+            agentUrl +
+            '?';
+          statusEl.className = 'status error';
+        };
+        document.body.appendChild(script);
+      }
+
+      // Auto-fill JWT if already in storage
+      var existingJwt = sessionStorage.getItem('auth-token');
+      if (existingJwt) {
+        document.getElementById('jwt').value = existingJwt;
+      }
+    </script>
+  </body>
+</html>

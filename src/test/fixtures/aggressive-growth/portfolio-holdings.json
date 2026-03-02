@@ -1,0 +1,64 @@
+{
+  "holdings": [
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA Corporation",
+      "allocationInPercentage": 0.3,
+      "valueInBaseCurrency": 45000,
+      "netPerformance": 17800,
+      "netPerformancePercent": 0.659,
+      "quantity": 51,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "currency": "USD"
+    },
+    {
+      "symbol": "TSLA",
+      "name": "Tesla, Inc.",
+      "allocationInPercentage": 0.25,
+      "valueInBaseCurrency": 37500,
+      "netPerformance": 5300,
+      "netPerformancePercent": 0.166,
+      "quantity": 150,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ARKK",
+      "name": "ARK Innovation ETF",
+      "allocationInPercentage": 0.2,
+      "valueInBaseCurrency": 30000,
+      "netPerformance": -2200,
+      "netPerformancePercent": -0.069,
+      "quantity": 577,
+      "assetClass": "EQUITY",
+      "assetSubClass": "ETF",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SOFI",
+      "name": "SoFi Technologies, Inc.",
+      "allocationInPercentage": 0.15,
+      "valueInBaseCurrency": 22500,
+      "netPerformance": 7400,
+      "netPerformancePercent": 0.493,
+      "quantity": 1500,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PLTR",
+      "name": "Palantir Technologies Inc.",
+      "allocationInPercentage": 0.1,
+      "valueInBaseCurrency": 15000,
+      "netPerformance": 5100,
+      "netPerformancePercent": 0.52,
+      "quantity": 200,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "currency": "USD"
+    }
+  ]
+}

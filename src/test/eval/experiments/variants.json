@@ -1,0 +1,22 @@
+{
+  "baseline": {
+    "model": "gpt-4o-mini",
+    "temperature": 0,
+    "maxTokens": 1024
+  },
+  "gpt4o": {
+    "model": "gpt-4o",
+    "temperature": 0,
+    "maxTokens": 1024
+  },
+  "higher-temp": {
+    "model": "gpt-4o-mini",
+    "temperature": 0.3,
+    "maxTokens": 1024
+  },
+  "gpt-5.1": {
+    "model": "gpt-5.1",
+    "temperature": 0,
+    "maxTokens": 1024
+  }
+}

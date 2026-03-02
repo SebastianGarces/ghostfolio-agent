@@ -1,0 +1,8 @@
+{
+  "dividends": [
+    { "date": "2024-03-15", "investment": 18 },
+    { "date": "2024-06-15", "investment": 20 },
+    { "date": "2024-09-15", "investment": 22 },
+    { "date": "2024-12-15", "investment": 25 }
+  ]
+}

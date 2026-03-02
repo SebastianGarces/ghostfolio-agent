@@ -1,0 +1,59 @@
+{
+  "xRay": {
+    "categories": [
+      {
+        "key": "currencies",
+        "name": "Currencies",
+        "rules": [
+          {
+            "key": "currencyClusterRisk",
+            "name": "Currency Cluster Risk",
+            "isActive": true,
+            "value": false,
+            "evaluation": "Your portfolio is 100% in USD."
+          }
+        ]
+      },
+      {
+        "key": "assetClasses",
+        "name": "Asset Classes",
+        "rules": [
+          {
+            "key": "assetClassClusterRisk",
+            "name": "Asset Class Cluster Risk",
+            "isActive": true,
+            "value": false,
+            "evaluation": "Your portfolio is 100% equities with no bonds or alternative assets."
+          }
+        ]
+      },
+      {
+        "key": "accounts",
+        "name": "Accounts",
+        "rules": [
+          {
+            "key": "accountClusterRisk",
+            "name": "Account Cluster Risk",
+            "isActive": true,
+            "value": false,
+            "evaluation": "Your portfolio is concentrated in a single account."
+          }
+        ]
+      },
+      {
+        "key": "fees",
+        "name": "Fees",
+        "rules": [
+          {
+            "key": "feeRatio",
+            "name": "Fee Ratio",
+            "isActive": true,
+            "value": true,
+            "evaluation": "Your fee ratio of 0.28% is within acceptable limits."
+          }
+        ]
+      }
+    ],
+    "statistics": { "rulesActiveCount": 4, "rulesFulfilledCount": 1 }
+  }
+}

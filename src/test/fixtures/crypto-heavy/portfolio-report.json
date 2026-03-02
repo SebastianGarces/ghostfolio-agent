@@ -1,0 +1,59 @@
+{
+  "xRay": {
+    "categories": [
+      {
+        "key": "currencies",
+        "name": "Currencies",
+        "rules": [
+          {
+            "key": "currencyClusterRisk",
+            "name": "Currency Cluster Risk",
+            "isActive": true,
+            "value": false,
+            "evaluation": "Your portfolio is 100% in USD-denominated assets."
+          }
+        ]
+      },
+      {
+        "key": "assetClasses",
+        "name": "Asset Classes",
+        "rules": [
+          {
+            "key": "assetClassClusterRisk",
+            "name": "Asset Class Cluster Risk",
+            "isActive": true,
+            "value": false,
+            "evaluation": "Your portfolio is 80% cryptocurrency. This is a very high-risk concentration."
+          }
+        ]
+      },
+      {
+        "key": "accounts",
+        "name": "Accounts",
+        "rules": [
+          {
+            "key": "accountClusterRisk",
+            "name": "Account Cluster Risk",
+            "isActive": true,
+            "value": false,
+            "evaluation": "Your portfolio is concentrated in a single account."
+          }
+        ]
+      },
+      {
+        "key": "fees",
+        "name": "Fees",
+        "rules": [
+          {
+            "key": "feeRatio",
+            "name": "Fee Ratio",
+            "isActive": true,
+            "value": true,
+            "evaluation": "Your fee ratio of 0.54% is acceptable for a crypto-heavy portfolio."
+          }
+        ]
+      }
+    ],
+    "statistics": { "rulesActiveCount": 4, "rulesFulfilledCount": 1 }
+  }
+}

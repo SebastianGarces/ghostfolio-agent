@@ -1,0 +1,111 @@
+{
+  "accounts": {
+    "acc-1": {
+      "balance": 5000,
+      "currency": "USD",
+      "name": "Main Brokerage",
+      "valueInBaseCurrency": 45000
+    }
+  },
+  "holdings": {
+    "AAPL": {
+      "activitiesCount": 3,
+      "allocationInPercentage": 0.35,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "countries": [
+        {
+          "code": "US",
+          "continent": "North America",
+          "name": "United States",
+          "weight": 1
+        }
+      ],
+      "currency": "USD",
+      "dataSource": "YAHOO",
+      "dateOfFirstActivity": "2023-01-15",
+      "dividend": 50.25,
+      "grossPerformance": 2500,
+      "grossPerformancePercent": 0.25,
+      "grossPerformancePercentWithCurrencyEffect": 0.25,
+      "grossPerformanceWithCurrencyEffect": 2500,
+      "holdings": [],
+      "investment": 10000,
+      "marketPrice": 185.5,
+      "name": "Apple Inc.",
+      "netPerformance": 2450,
+      "netPerformancePercent": 0.245,
+      "netPerformancePercentWithCurrencyEffect": 0.245,
+      "netPerformanceWithCurrencyEffect": 2450,
+      "quantity": 67,
+      "sectors": [{ "name": "Technology", "weight": 1 }],
+      "symbol": "AAPL",
+      "valueInBaseCurrency": 12428.5
+    },
+    "VTI": {
+      "activitiesCount": 5,
+      "allocationInPercentage": 0.45,
+      "assetClass": "EQUITY",
+      "assetSubClass": "ETF",
+      "countries": [],
+      "currency": "USD",
+      "dataSource": "YAHOO",
+      "dateOfFirstActivity": "2022-06-01",
+      "dividend": 120.0,
+      "grossPerformance": 3200,
+      "grossPerformancePercent": 0.2,
+      "grossPerformancePercentWithCurrencyEffect": 0.2,
+      "grossPerformanceWithCurrencyEffect": 3200,
+      "holdings": [],
+      "investment": 16000,
+      "marketPrice": 240.0,
+      "name": "Vanguard Total Stock Market ETF",
+      "netPerformance": 3150,
+      "netPerformancePercent": 0.197,
+      "netPerformancePercentWithCurrencyEffect": 0.197,
+      "netPerformanceWithCurrencyEffect": 3150,
+      "quantity": 80,
+      "sectors": [],
+      "symbol": "VTI",
+      "valueInBaseCurrency": 19200
+    },
+    "BND": {
+      "activitiesCount": 2,
+      "allocationInPercentage": 0.2,
+      "assetClass": "FIXED_INCOME",
+      "assetSubClass": "ETF",
+      "countries": [],
+      "currency": "USD",
+      "dataSource": "YAHOO",
+      "dateOfFirstActivity": "2023-03-10",
+      "dividend": 200.0,
+      "grossPerformance": -150,
+      "grossPerformancePercent": -0.02,
+      "grossPerformancePercentWithCurrencyEffect": -0.02,
+      "grossPerformanceWithCurrencyEffect": -150,
+      "holdings": [],
+      "investment": 7500,
+      "marketPrice": 72.5,
+      "name": "Vanguard Total Bond Market ETF",
+      "netPerformance": -180,
+      "netPerformancePercent": -0.024,
+      "netPerformancePercentWithCurrencyEffect": -0.024,
+      "netPerformanceWithCurrencyEffect": -180,
+      "quantity": 101,
+      "sectors": [],
+      "symbol": "BND",
+      "valueInBaseCurrency": 7322.5
+    }
+  },
+  "platforms": {},
+  "summary": {
+    "annualizedPerformancePercent": 0.12,
+    "currentNetWorth": 38951,
+    "dividend": 370.25,
+    "fees": 85.5,
+    "netPerformance": 5420,
+    "netPerformancePercentage": 0.162,
+    "totalInvestment": 33500
+  },
+  "hasError": false
+}

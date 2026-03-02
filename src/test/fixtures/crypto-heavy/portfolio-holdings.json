@@ -1,0 +1,64 @@
+{
+  "holdings": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "allocationInPercentage": 0.4,
+      "valueInBaseCurrency": 20000,
+      "netPerformance": 10400,
+      "netPerformancePercent": 1.095,
+      "quantity": 0.206,
+      "assetClass": "EQUITY",
+      "assetSubClass": "CRYPTOCURRENCY",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "allocationInPercentage": 0.25,
+      "valueInBaseCurrency": 12500,
+      "netPerformance": 5100,
+      "netPerformancePercent": 0.699,
+      "quantity": 3.68,
+      "assetClass": "EQUITY",
+      "assetSubClass": "CRYPTOCURRENCY",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "allocationInPercentage": 0.15,
+      "valueInBaseCurrency": 7500,
+      "netPerformance": 4750,
+      "netPerformancePercent": 1.759,
+      "quantity": 39.5,
+      "assetClass": "EQUITY",
+      "assetSubClass": "CRYPTOCURRENCY",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "allocationInPercentage": 0.1,
+      "valueInBaseCurrency": 5000,
+      "netPerformance": 750,
+      "netPerformancePercent": 0.179,
+      "quantity": 27,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "currency": "USD"
+    },
+    {
+      "symbol": "VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "allocationInPercentage": 0.1,
+      "valueInBaseCurrency": 5000,
+      "netPerformance": 650,
+      "netPerformancePercent": 0.151,
+      "quantity": 21,
+      "assetClass": "EQUITY",
+      "assetSubClass": "ETF",
+      "currency": "USD"
+    }
+  ]
+}

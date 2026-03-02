@@ -1,0 +1,46 @@
+{
+  "chart": [
+    {
+      "date": "2023-01-01",
+      "netWorth": 30000,
+      "totalInvestment": 28000,
+      "netPerformanceInPercentage": 0.07
+    },
+    {
+      "date": "2023-06-01",
+      "netWorth": 33000,
+      "totalInvestment": 30000,
+      "netPerformanceInPercentage": 0.1
+    },
+    {
+      "date": "2024-01-01",
+      "netWorth": 36000,
+      "totalInvestment": 32000,
+      "netPerformanceInPercentage": 0.125
+    },
+    {
+      "date": "2024-06-01",
+      "netWorth": 38000,
+      "totalInvestment": 33000,
+      "netPerformanceInPercentage": 0.152
+    },
+    {
+      "date": "2024-12-31",
+      "netWorth": 38951,
+      "totalInvestment": 33500,
+      "netPerformanceInPercentage": 0.162
+    }
+  ],
+  "firstOrderDate": "2022-06-01",
+  "performance": {
+    "annualizedPerformancePercent": 0.12,
+    "currentNetWorth": 38951,
+    "currentValueInBaseCurrency": 38951,
+    "netPerformance": 5420,
+    "netPerformancePercentage": 0.162,
+    "netPerformancePercentageWithCurrencyEffect": 0.162,
+    "netPerformanceWithCurrencyEffect": 5420,
+    "totalInvestment": 33500,
+    "totalInvestmentValueWithCurrencyEffect": 33500
+  }
+}

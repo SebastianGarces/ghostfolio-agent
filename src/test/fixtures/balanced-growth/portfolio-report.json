@@ -1,0 +1,62 @@
+{
+  "xRay": {
+    "categories": [
+      {
+        "key": "currencies",
+        "name": "Currencies",
+        "rules": [
+          {
+            "key": "currencyClusterRisk",
+            "name": "Currency Cluster Risk",
+            "isActive": true,
+            "value": true,
+            "evaluation": "Your portfolio is well-diversified across currencies."
+          }
+        ]
+      },
+      {
+        "key": "assetClasses",
+        "name": "Asset Classes",
+        "rules": [
+          {
+            "key": "assetClassClusterRisk",
+            "name": "Asset Class Cluster Risk",
+            "isActive": true,
+            "value": true,
+            "evaluation": "You have a balanced mix of equities and fixed income."
+          }
+        ]
+      },
+      {
+        "key": "accounts",
+        "name": "Accounts",
+        "rules": [
+          {
+            "key": "accountClusterRisk",
+            "name": "Account Cluster Risk",
+            "isActive": true,
+            "value": false,
+            "evaluation": "Your portfolio is concentrated in a single account. Consider diversifying across multiple accounts."
+          }
+        ]
+      },
+      {
+        "key": "fees",
+        "name": "Fees",
+        "rules": [
+          {
+            "key": "feeRatio",
+            "name": "Fee Ratio",
+            "isActive": true,
+            "value": true,
+            "evaluation": "Your fee ratio of 0.25% is within acceptable limits."
+          }
+        ]
+      }
+    ],
+    "statistics": {
+      "rulesActiveCount": 4,
+      "rulesFulfilledCount": 3
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "accounts": {
+    "acc-1": {
+      "balance": 2000,
+      "currency": "USD",
+      "name": "Growth Brokerage",
+      "valueInBaseCurrency": 150000
+    }
+  },
+  "holdings": {
+    "NVDA": {
+      "activitiesCount": 6,
+      "allocationInPercentage": 0.3,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "countries": [
+        {
+          "code": "US",
+          "continent": "North America",
+          "name": "United States",
+          "weight": 1
+        }
+      ],
+      "currency": "USD",
+      "dataSource": "YAHOO",
+      "dateOfFirstActivity": "2022-01-20",
+      "dividend": 20,
+      "grossPerformance": 18000,
+      "grossPerformancePercent": 0.67,
+      "grossPerformancePercentWithCurrencyEffect": 0.67,
+      "grossPerformanceWithCurrencyEffect": 18000,
+      "holdings": [],
+      "investment": 27000,
+      "marketPrice": 875.0,
+      "name": "NVIDIA Corporation",
+      "netPerformance": 17800,
+      "netPerformancePercent": 0.659,
+      "netPerformancePercentWithCurrencyEffect": 0.659,
+      "netPerformanceWithCurrencyEffect": 17800,
+      "quantity": 51,
+      "sectors": [{ "name": "Technology", "weight": 1 }],
+      "symbol": "NVDA",
+      "valueInBaseCurrency": 45000
+    },
+    "TSLA": {
+      "activitiesCount": 5,
+      "allocationInPercentage": 0.25,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "countries": [
+        {
+          "code": "US",
+          "continent": "North America",
+          "name": "United States",
+          "weight": 1
+        }
+      ],
+      "currency": "USD",
+      "dataSource": "YAHOO",
+      "dateOfFirstActivity": "2022-06-01",
+      "dividend": 0,
+      "grossPerformance": 5500,
+      "grossPerformancePercent": 0.172,
+      "grossPerformancePercentWithCurrencyEffect": 0.172,
+      "grossPerformanceWithCurrencyEffect": 5500,
+      "holdings": [],
+      "investment": 32000,
+      "marketPrice": 250.0,
+      "name": "Tesla, Inc.",
+      "netPerformance": 5300,
+      "netPerformancePercent": 0.166,
+      "netPerformancePercentWithCurrencyEffect": 0.166,
+      "netPerformanceWithCurrencyEffect": 5300,
+      "quantity": 150,
+      "sectors": [{ "name": "Consumer Cyclical", "weight": 1 }],
+      "symbol": "TSLA",
+      "valueInBaseCurrency": 37500
+    },
+    "ARKK": {
+      "activitiesCount": 4,
+      "allocationInPercentage": 0.2,
+      "assetClass": "EQUITY",
+      "assetSubClass": "ETF",
+      "countries": [],
+      "currency": "USD",
+      "dataSource": "YAHOO",
+      "dateOfFirstActivity": "2023-01-15",
+      "dividend": 0,
+      "grossPerformance": -2000,
+      "grossPerformancePercent": -0.063,
+      "grossPerformancePercentWithCurrencyEffect": -0.063,
+      "grossPerformanceWithCurrencyEffect": -2000,
+      "holdings": [],
+      "investment": 32000,
+      "marketPrice": 52.0,
+      "name": "ARK Innovation ETF",
+      "netPerformance": -2200,
+      "netPerformancePercent": -0.069,
+      "netPerformancePercentWithCurrencyEffect": -0.069,
+      "netPerformanceWithCurrencyEffect": -2200,
+      "quantity": 577,
+      "sectors": [],
+      "symbol": "ARKK",
+      "valueInBaseCurrency": 30000
+    },
+    "SOFI": {
+      "activitiesCount": 3,
+      "allocationInPercentage": 0.15,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "countries": [
+        {
+          "code": "US",
+          "continent": "North America",
+          "name": "United States",
+          "weight": 1
+        }
+      ],
+      "currency": "USD",
+      "dataSource": "YAHOO",
+      "dateOfFirstActivity": "2023-03-01",
+      "dividend": 0,
+      "grossPerformance": 7500,
+      "grossPerformancePercent": 0.5,
+      "grossPerformancePercentWithCurrencyEffect": 0.5,
+      "grossPerformanceWithCurrencyEffect": 7500,
+      "holdings": [],
+      "investment": 15000,
+      "marketPrice": 15.0,
+      "name": "SoFi Technologies, Inc.",
+      "netPerformance": 7400,
+      "netPerformancePercent": 0.493,
+      "netPerformancePercentWithCurrencyEffect": 0.493,
+      "netPerformanceWithCurrencyEffect": 7400,
+      "quantity": 1500,
+      "sectors": [{ "name": "Financial Services", "weight": 1 }],
+      "symbol": "SOFI",
+      "valueInBaseCurrency": 22500
+    },
+    "PLTR": {
+      "activitiesCount": 3,
+      "allocationInPercentage": 0.1,
+      "assetClass": "EQUITY",
+      "assetSubClass": "STOCK",
+      "countries": [
+        {
+          "code": "US",
+          "continent": "North America",
+          "name": "United States",
+          "weight": 1
+        }
+      ],
+      "currency": "USD",
+      "dataSource": "YAHOO",
+      "dateOfFirstActivity": "2023-06-01",
+      "dividend": 0,
+      "grossPerformance": 5200,
+      "grossPerformancePercent": 0.53,
+      "grossPerformancePercentWithCurrencyEffect": 0.53,
+      "grossPerformanceWithCurrencyEffect": 5200,
+      "holdings": [],
+      "investment": 9800,
+      "marketPrice": 75.0,
+      "name": "Palantir Technologies Inc.",
+      "netPerformance": 5100,
+      "netPerformancePercent": 0.52,
+      "netPerformancePercentWithCurrencyEffect": 0.52,
+      "netPerformanceWithCurrencyEffect": 5100,
+      "quantity": 200,
+      "sectors": [{ "name": "Technology", "weight": 1 }],
+      "symbol": "PLTR",
+      "valueInBaseCurrency": 15000
+    }
+  },
+  "platforms": {},
+  "summary": {
+    "annualizedPerformancePercent": 0.21,
+    "currentNetWorth": 150000,
+    "dividend": 20,
+    "fees": 320,
+    "netPerformance": 33400,
+    "netPerformancePercentage": 0.286,
+    "totalInvestment": 115800
+  },
+  "hasError": false
+}

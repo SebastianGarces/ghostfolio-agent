@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+*.test.ts
+*.spec.ts
+src/test
+src/widget/dev.html
+tsconfig*.json
+eslint.config.cjs
